@@ -1,17 +1,18 @@
 import { Injectable } from "@angular/core";
+import { Subject } from "rxjs";
 
 @Injectable({providedIn: 'root'})
-export class CustomTitleService{
+export class AuthService{
 
- user?: string;
+ user = new Subject<string>();
+
   constructor(){}
 
   login(){
-    this.user = 'Dennis';
-    console.log(this.user)
+    this.user.next('Dennis');
   }
 
-  getCurrentUser(): string{
+  getCurrentUser(): Subject<string>{
     return this.user;
 }
 }

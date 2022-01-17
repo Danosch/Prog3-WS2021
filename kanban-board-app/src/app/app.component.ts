@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/lib/feature/auth.service';
 import { CustomTitleService } from 'src/lib/feature/costum-title.service';
 
 @Component({
@@ -12,8 +13,8 @@ export class AppComponent implements OnInit {
 
   constructor(
     private customTitleService: CustomTitleService,
-    private authService: AuthService
-    ){}
+    private authService: AuthService)
+    {}
 
   ngOnInit(): void {
     this.customTitleService.updateCustomPageTitle();
