@@ -10,8 +10,16 @@ import { CustomTitleService } from 'src/lib/feature/costum-title.service';
 export class AppComponent implements OnInit {
   title = 'kanban-board-app';
 
-  constructor(private customTitleService: CustomTitleService){}
+  constructor(
+    private customTitleService: CustomTitleService,
+    private authService: AuthService
+    ){}
+
   ngOnInit(): void {
     this.customTitleService.updateCustomPageTitle();
+  }
+
+  onLoginClick(){
+    this.authService.login();
   }
 }

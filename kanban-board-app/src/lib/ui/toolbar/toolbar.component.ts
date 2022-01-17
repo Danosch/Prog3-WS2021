@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class ToolbarComponent {
   @Input()
   title = 'My Board';
+  username?: string;
 }
