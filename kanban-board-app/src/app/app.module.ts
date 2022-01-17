@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule, UiModule],
-  providers: [],
   bootstrap: [AppComponent],
+  providers: [{provide: 'titleString', useValue: 'Hello World'}],
 })
 export class AppModule {}
