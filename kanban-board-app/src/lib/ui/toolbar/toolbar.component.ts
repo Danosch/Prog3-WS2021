@@ -17,6 +17,7 @@ export class ToolbarComponent implements OnInit{
   ngOnInit(): void {
       this.authService.getCurrentUser().subscribe(user => {
         this.username = user;
+
       });
   }
 }
