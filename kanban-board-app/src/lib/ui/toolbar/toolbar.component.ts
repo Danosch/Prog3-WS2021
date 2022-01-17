@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'toolbar',
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.scss'],
 })
-export class ToolbarComponent {}
+export class ToolbarComponent {
+  @Input()
+  title = 'My Board';
+}
