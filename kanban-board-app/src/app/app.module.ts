@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ToolbarComponent } from 'src/lib/ui/toolbar/toolbar.component';
+import { UiModule } from '../lib/ui/ui.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 
 @NgModule({
-  declarations: [AppComponent, ToolbarComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, UiModule],
   providers: [],
   bootstrap: [AppComponent],
 })
